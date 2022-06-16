@@ -1,0 +1,4 @@
+repository "EarthDefenders2022@ANDYB@cloud"
+  path "/"
+    br "/main"
+    co "/main"
