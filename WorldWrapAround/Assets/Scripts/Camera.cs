@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Camera : MonoBehaviour
@@ -16,17 +14,14 @@ public class Camera : MonoBehaviour
     [SerializeField] Transform leftCam;
     [SerializeField] Transform rightCam;
     
-    // Start is called before the first frame update
     void Start()
     {
         this.z = transform.position.z;
         this.position = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        var present = this.position;
         var horz = Input.GetAxis("Horizontal");
 
         position += Vector3.right * horz * this.speed * Time.deltaTime;
